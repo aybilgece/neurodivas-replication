@@ -1,13 +1,12 @@
 # Reproducing NEURODIVAS: AI vs. Human Advice Sources
 
-**Rebuilding a 2×2 factorial vignette study from its published summary statistics — and re-deriving every reported result.**
+**Rebuilding a 2×2 factorial vignette study from its published summary statistics and to reveal re-deriving every reported result.**
 
 This repository takes the *output* of a psychology study (the SPSS tables: cell
 means, standard deviations, Ns, and the correlation matrix) and reconstructs a
 participant-level dataset that reproduces the study's manipulation-check t-test,
-correlation structure, and two-way MANOVA. The point isn't to re-run someone's
-`.sav` file with one click — it's to show that the published statistical
-conclusions can be regenerated transparently, in open tooling, from numbers
+correlation structure, and two-way MANOVA. The point is to show that the published statistical
+conclusions can be regenerated transparently in open tooling and from numbers
 alone.
 
 > **The interesting constraint:** the raw data file was never available — only
@@ -20,13 +19,13 @@ alone.
 
 A between-subjects 2×2 vignette experiment (PSY 204, TED University, 2026)
 crossing **Emotional Context** (high = relationship advice / low = language-learning
-advice) with **Source Type** (human friend / generative-AI tool). Four perceived
+advice) with **Source Type** (human friend and generative-AI tool). Four perceived
 social attributes were measured (N = 59):
 
-- **SA** — Social Attraction (sum of 3 items)
-- **ES** — Emotional Support (sum of 4 items)
-- **PC** — Perceived Competence (mean of 3 items)
-- **PW** — Perceived Warmth (mean of 3 items)
+**SA** — Social Attraction (sum of 3 items)
+**ES** — Emotional Support (sum of 4 items)
+**PC** — Perceived Competence (mean of 3 items)
+**PW** — Perceived Warmth (mean of 3 items)
 
 The headline finding: a significant **main effect of emotional context** (advice
 sources were rated as *more competent* in the low-emotion context), with **no**
@@ -94,8 +93,8 @@ To re-validate the dataset itself: `python3 validation/generate_and_validate.py`
 ## Data & ethics
 
 The committed dataset is **fully synthetic**. It contains no real participant
-responses — every row is generated from the study's published aggregate
-statistics. The original consent covered classroom/educational use of the data,
+responses and every row is generated from the study's published aggregate
+statistics. The original consent covered classroom (educational) use of the data,
 so the *raw* responses are deliberately **not** redistributed here; reconstructing
 from public summary numbers keeps this open repository ethically clean while
 still demonstrating the full analytic pipeline. Synthetic demographic columns
@@ -105,7 +104,7 @@ in any analysis.
 ## Honest limitations
 
 - This reproduces the *reported statistics and conclusions*, not the original
-  individual responses — synthetic data cannot recover information the summary
+  individual responses and synthetic data cannot recover information the summary
   statistics never contained (e.g. the true joint distribution within cells).
 - The bootstrap CIs reported in the paper are not reproduced point-for-point;
   the focus here is the descriptive, correlational, and MANOVA results.
@@ -118,4 +117,4 @@ Aydemir, A., Tahmasbi, P., Hasan, D., Bilsin, D., Çoban, G., Şimşek, S. Z., &
 Arslan, Z. A. (2026). *The Psychology of AI Companionship* (PSY 204 research
 report). TED University, Department of Psychology.
 
-Reconstruction & reproducible analysis by Aybilge.
+Reconstruction & reproducible analysis by Dolunay (Aybilge) Bilsin.
